@@ -14,9 +14,9 @@ int index2=0;
 PFont orcFont;
 void setup() {
   
- size (1600, 900); // **CHANGE THIS TO YOUR SCREEN RESOLUTION**
+ size (1600, 900);
  smooth();
- myPort = new Serial(this,"COM5", 9600); // starts the serial communication
+ myPort = new Serial(this,"COM4", 9600); // starts the serial communication (change the port to your port before running the code)
  myPort.bufferUntil('.'); // reads the data from the serial port up to the character '.'. So actually it reads this: angle,distance.
 }
 
@@ -110,7 +110,7 @@ void drawText() { // draws the texts on the screen
   text("30cm",width-width*0.177,height-height*0.08);
   text("40cm",width-width*0.0729,height-height*0.08);
   textSize(40);
-  text("GLS SONAR ", width*0.01, height*0.98);
+  text("EchoSense ", width*0.01, height*0.98);
   text("Angle: " + iAngle + " °", width*0.35, height*0.98);
   text("Distance: " + iDistance + " cm", width*0.63, height*0.98);
   
